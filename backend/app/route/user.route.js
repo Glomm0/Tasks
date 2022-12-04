@@ -18,4 +18,5 @@ app.get('/api/user/:id', user.findById);
 
 // Получение пользователя по username
 app.get('/api/user/username/:username', user.findByUsername);
+
 };
