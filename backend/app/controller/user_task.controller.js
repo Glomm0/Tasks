@@ -42,6 +42,7 @@ exports.update = (req, res) => {
         globalFunctions.sendError(res, err);
     })
 };
+
 exports.delete = (req, res) => {
     UserTask.destroy({
         where: {
@@ -54,7 +55,7 @@ exports.delete = (req, res) => {
     });
 };
 exports.UserTasksForPeriod = (req, res) => {
-    console.log(req)
+    //console.log(req)
     UserTask.findAll({
         
         where: {

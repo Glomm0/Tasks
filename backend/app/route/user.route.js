@@ -1,9 +1,9 @@
 module.exports = (app) => {
-
+    var { authJwt } = require("../middleware");
     const user = require('../controller/user.controller');
     
     // Получение всех пользователей
-    app.get('/api/users', user.findAll);
+    app.get('/api/users',[authJwt.verifyToken], user.findAll);
     // Добавление пользователя
 app.post('/api/addUser', user.create);
 
