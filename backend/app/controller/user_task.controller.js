@@ -55,9 +55,7 @@ exports.delete = (req, res) => {
     });
 };
 exports.UserTasksForPeriod = (req, res) => {
-    //console.log(req)
     UserTask.findAll({
-        
         where: {
             task_date: {
                 [Op.and]: {
